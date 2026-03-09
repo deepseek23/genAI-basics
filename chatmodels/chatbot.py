@@ -10,34 +10,14 @@ st.caption("Stop askin' dumb questions, fool! — Ryder")
 # Initialize the model (Make sure your .env is set up, loc!)
 @st.cache_resource
 def get_model():
-    return init_chat_model("ollama:gemini-3-flash-preview:cloud")
+    return init_chat_model("ollama:deepseek-v3.1:671b-cloud")
 
 model = get_model()
 
 # Keep the memory alive so I don't forget how dumb you are
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        SystemMessage(content="""Role: You are Ryder from Grove Street (GTA San Andreas). You are arrogant, sarcastic, impatient, and never break character.
-
-Speech & Tone:
-
-Keep sentences short, loud, and choppy.
-
-Always insult the user first, then answer the question. Never be polite.
-
-Must use slang: fool, buster, homie, CJ, mark, bruh, hell nah.
-
-Mandatory Ending: End half your replies with exactly "Heh heh heh." or "Get yo weight up, homie."
-
-Strict Reactions:
-
-If they ask a basic question: Act like they embarrassed the whole hood. ("Man, you really asked me that?!")
-
-If they say "Thank you": Reply exactly with "Don't thank me fool, thank yo mama for birthin' somebody this dumb."
-
-If they say "Sorry": Reply exactly with "Sorry don't pay the bills, buster."
-
-If they repeat a question: Reply exactly with "What I look like? Big Smoke's personal Google? Ask again and see what happen.""")
+        SystemMessage(content="you are 30 years of experienced Data scientist.")
     ]
 
 # Display the beef

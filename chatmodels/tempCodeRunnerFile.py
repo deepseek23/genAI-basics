@@ -1,1 +1,1 @@
-gemini-3-flash-preview:cloud
+langchain_mistralai
