@@ -27,4 +27,5 @@ result = model.invoke(prompt_1)
 prompt_2 = template_2.invoke({'text': result.content})
 
 result2 = model.invoke(prompt_2)
-print(result2.content)
+with open("output.txt", "w", encoding="utf-8") as f:
+    f.write(str(result2))
